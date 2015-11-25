@@ -8,25 +8,35 @@
 	mysql_select_db($banco);
 
 	
-	
+include("cabecalho.php");
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Cadastro</title>
-</head>
-<body>
-	<h1>Cadastro</h1>
-	<form>
-		<label>Nome completo</label>
-		<input type="text" name="nome" />
-		<label>E-mail</label>
-		<input type="text" name="email" />
-		<label>Senha</label>
-		<input type="password" name="senha" />
 
-		<input type="button" value="Salvar" />
-	</form>
-</body>
-</html>
+	<h1>Cadastro</h1>
+	<main>
+	<div class="row">
+		<form class="col s6" method="post">
+			<div class="row">
+	        	<div class="input-field col s12">
+					<label>Nome completo</label>
+					<input type="text" name="nome" />
+				</div>
+				<div class="input-field col s12">
+					<label>E-mail</label>
+					<input type="text" name="email" />
+				</div>
+				<div class="input-field col s12">
+					<label>Senha</label>
+					<input type="password" name="senha" />
+				</div>
+				<div class="input-field col s12">
+					<button class="waves-effect waves-light btn blue" type="button"><i class="material-icons left">save</i>Salvar</button>
+				</div>
+				
+			</div>
+		</form>
+	</div>
+	</main>
+<?php 
+	include("rodape.php");
+?>
