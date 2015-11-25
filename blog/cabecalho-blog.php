@@ -1,18 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   <html>
     <head>
-      <link type="text/css" rel="stylesheet" href="css/reset.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="../../css/reset.css"  media="screen,projection"/>
+
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900,900italic,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
 
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="../../css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="../../css/style.css"  media="screen,projection"/>
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="../../js/materialize.min.js"></script>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -45,9 +46,9 @@
       <!-- Menu Links -->
       <div class="row">
       <ul class="left hide-on-med-and-down" style="margin-left: 250px;">
-        <li><a href="index.php">Início</a></li>
-        <li><a href="blog.php">Blog</a></li>
-        <li><a href="galeria.php">Galeria</a></li>
+        <li><a href="../../index.php">Início</a></li>
+        <li><a href="../../blog.php">Blog</a></li>
+        <li><a href="../../galeria.php">Galeria</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
         <li id="user_login">  
@@ -58,10 +59,9 @@
       </div>
 
       <ul class="side-nav">
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Galeria</a></li>
-        <li><a href="#">Sobre</a></li>
+        <li><a href="../../index.php">Início</a></li>
+        <li><a href="../../blog.php">Blog</a></li>
+        <li><a href="../../galeria.php">Galeria</a></li>
       </ul>
 
     </div>

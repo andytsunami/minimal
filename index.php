@@ -18,38 +18,54 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col s4" id="blog_intro_text">
-      <a href=""><object id="icon-design-minimalista" type="image/svg+xml" data="images/icon_designminimalista.svg" style="margin-left: -10px;"></object>
-      <h1>Design Minimalista</h1></a>
-      <p>Conheça os conceitos básicos sobre o Design Minimalista.</p>
+      <div class="col s4 visite-container blog_intro_text">
+        <img src="images/icon_designminimalista.svg" class="icon-design-minimalista" style="margin-left: -10px;">
+        <div class="visite">
+          <h1>Design Minimalista</h1></a>
+          <p>Conheça os conceitos básicos sobre o Design Minimalista.</p>
+        </div>
       </div>
-      <div class="col s4" id="blog_intro_text">
-      <a href=""><object id="icon-design-minimalista" type="image/svg+xml" data="images/icon_userexperience.svg"></object>
-      <h1>User Experience</h1></a>
-      <p>A experiência do usuário faz parte de Arquitetura de Informação e é uma das partes vitais da usabilidade.</p>
+
+      <div class="col s4 visite-container blog_intro_text">
+        <img src="images/icon_userexperience.svg" class="icon-design-minimalista">
+        <div class="visite">
+          <h1>User Experience</h1></a>
+          <p>A experiência do usuário faz parte de Arquitetura de Informação e é uma das partes vitais da usabilidade.</p>
+        </div>
       </div>
-      <div class="col s4" id="blog_intro_text">
-      <a href=""><object id="icon-design-minimalista" type="image/svg+xml" data="images/icon_flatdesign.svg"></object>
-      <h1>Flat Design</h1></a>
-      <p>O Flat Design é uma das tendências do momento, e um dos melhores exemplos do Design Minimalista contemporâneo.</p>
+
+      <div class="col s4 visite-container blog_intro_text">
+        <img src="images/icon_flatdesign.svg" class="icon-design-minimalista">
+        <div class="visite">
+          <h1>Flat Design</h1></a>
+          <p>O Flat Design é uma das tendências do momento, e um dos melhores exemplos do Design Minimalista contemporâneo.</p>
+        </div>
       </div>
-      </div>
+  
       <div class="row">
-      <div class="col s4" id="blog_intro_text">
-      <a href=""><object id="icon-design-minimalista" type="image/svg+xml" data="images/icon_metrodesign.svg"></object>
-      <h1>Metro Design</h1></a>
-      <p>Iniciado pela Microsoft, o Metro Design é um estilo inspirado no Flat Design, utilizando amplamente nos produtos Microsoft.</p>
-      </div>
-      <div class="col s4" id="blog_intro_text">
-      <a href=""><object id="icon-design-minimalista" type="image/svg+xml" data="images/icon_appledesign.svg"></object>
-      <h1>Apple Design</h1></a>
-      <p>A partir do iOS 7, a Apple atualizou suas interfaces com um estilo inspirado no Flat Design.</p>
-      </div>
-      <div class="col s4" id="blog_intro_text">
-      <a href=""><object id="icon-design-minimalista" type="image/svg+xml" data="images/icon_materialdesign.svg"></object>
-      <h1>Material Design</h1></a>
-      <p>Com o Android Lollipop, a Google criou o Design Material, com elementos de papel virtual e sombras em uma interface 2D.</p>
-      </div>
+        <div class="col s4 visite-container blog_intro_text">
+          <img src="images/icon_metrodesign.svg" class="icon-design-minimalista">
+          <div class="visite">
+            <h1>Metro Design</h1></a>
+            <p>Iniciado pela Microsoft, o Metro Design é um estilo inspirado no Flat Design, utilizando amplamente nos produtos Microsoft.</p>
+          </div>
+        </div>
+
+        <div class="col s4 visite-container blog_intro_text">
+          <img src="images/icon_appledesign.svg" class="icon-design-minimalista">
+          <div class="visite">
+            <h1>Apple Design</h1></a>
+            <p>A partir do iOS 7, a Apple atualizou suas interfaces com um estilo inspirado no Flat Design.</p>
+          </div>
+        </div>
+
+        <div class="col s4 visite-container blog_intro_text">
+          <img src="images/icon_materialdesign.svg" class="icon-design-minimalista">
+          <div class="visite">
+            <h1>Material Design</h1></a>
+            <p>Com o Android Lollipop, a Google criou o Design Material, com elementos de papel virtual e sombras em uma interface 2D.</p>
+          </div>
+        </div>
     </div>
   </div>
   </div>

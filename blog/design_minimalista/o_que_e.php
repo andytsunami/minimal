@@ -1,71 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="http://127.0.0.1/projects/minimal_design/css/materialize.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="http://127.0.0.1/projects/minimal_design/css/style.css"  media="screen,projection"/>
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-      <meta charset="UTF-8">
-
-    </head>
-
-    <body>
-
-  <header>
-<!-- Start Navigation -->
-  <div class="navbar-fixed">
-  <nav class="no-shadow">
-    <div class="nav-wrapper grey darken-4">
-    <div class="container">
-      <a href="#" class="brand-logo">Minimal Design</a>
-
-
-      <!-- Mobile Hamburguer Icon -->
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-
-      <!-- Menu Links -->
-      <div class="row">
-      <ul class="left hide-on-med-and-down" style="margin-left: 250px;">
-        <li><a href="http://127.0.0.1/projects/minimal_design/index.php">Início</a></li>
-        <li><a href="http://127.0.0.1/projects/minimal_design/blog.php">Blog</a></li>
-        <li><a href="http://127.0.0.1/projects/minimal_design/galeria.php">Galeria</a></li>
-      </ul>
-      <ul class="right hide-on-med-and-down">
-        <li id="user_login">  
-        <!-- Modal Trigger -->
-        <a class="waves-effect waves-light btn modal-trigger blue" href="#modal1">Login</a>
-
-
-        <!-- Modal Structure -->
-          <div id="modal1" class="modal">
-            <div class="modal-content">
-              <h4>Modal Header</h4>
-              <p>A bunch of text</p>
-            </div>
-          <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-          </div>
-        </div>
-        </li>
-      </ul>
-      </div>
-
-      <!-- Mobile Menu Links
-      <ul class="side-nav">
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Galeria</a></li>
-      </ul>
-       -->
-    </div>
-    </div>
-  </nav>
-  </div>
-<!-- End Navigation -->
+<?php 
+    include("../cabecalho-blog.php");
+?>
   </header>
 <!-- Start Blog -->
 <div id="blog_page">
@@ -176,18 +111,6 @@
 
 </div>
 </div>
-<!-- Footer --> 
-  <footer class="page-footer">
-  <div class="footer-copyright grey darken-4">
-    <div class="container">
-      © 2015 Minimal Design - Universidade Anhembi Morumbi
-      <a class="white-text right" href="#!">Facebook Page</a>
-    </div>
-  </div>
-  </footer>
-
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="http://127.0.0.1/projects/minimal_design/js/materialize.min.js"></script>
-    </body>
-  </html>
+<?php 
+  include("../../rodape.php");
+?>
