@@ -408,6 +408,7 @@ article a{
    bottom:0px !important;
    height:50px !important;
    width:100% !important;
+   z-index: 9999;
 }
 
 .visite-container{
@@ -431,4 +432,7 @@ article a{
     display: inline-block !important;
     visibility: visible;
     opacity: 1;
+}
+.sub{
+  padding-top: 4em !important;
 }
