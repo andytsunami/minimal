@@ -14,51 +14,42 @@
 
 	$sql = "";
 	$preenchido = (!empty($_POST["nome"]) AND !empty($_POST['email']) AND !empty($_POST['senha']));
+
+	$erro = "";
 	
-	//echo var_dump($preenchido);
 
 	if($preenchido){
+
 
 		$nome =  htmlentities($_POST['nome'],ENT_QUOTES);
 		$email = htmlentities($_POST['email'],ENT_QUOTES);
 		$senha = htmlentities($_POST['senha'],ENT_QUOTES);
 
-		$senha = md5($senha);
-
-		$sql = "INSERT INTO visitante (nome,email,senha) VALUES('{$nome}','{$email}','{$senha}');";
-
-		mysql_query($sql,$conexao);
-
-		//header("Location: index.php");
-
-
-
+		if(emailUnico($email,$conexao)){
+			$senha = md5($senha);
+			$sql = "INSERT INTO visitante (nome,email,senha) VALUES('{$nome}','{$email}','{$senha}');";
+			mysql_query($sql,$conexao);
+			header("Location: index.php");
+		} else {
+			$erro = "Endereço de email já cadastrado.";
+		}
 	}
 
 	function emailUnico($email,$conexao){
-		$result = mysql_query("select count(*) from visitante where email = {$email};",$conexao);
-		$quantidade = mysql_num_rows($result);
+	
+		$result = mysql_query("select count(*) quant from visitante where email = '{$email}';",$conexao) or exit(mysql_error());
+		
+		$quant = mysql_result($result, 0);
 
-		var_dump($quantidade);
-
-		return $quantidade;
-
+		return $quant == 0;
 	}
-
-
-	if(isset($_POST['senha'])){
-		$res = emailUnico($_POST['senha'],$conexao);
-		/*echo "Resultado " . " - " . $res . " ?";	
-		var_dump($res);*/
-	}
-
-
 	
 	include("cabecalho.php");
+	mysql_close();
 ?>
 
 	<div class="container">
-		<h1 class="header">Cadastro</h1>
+		<h1 class="header">Cadastro <?=$erro?></h1>
 		<main>
 		<div class="row">
 			<form class="col s6" method="post" id="form">
