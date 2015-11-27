@@ -13,4 +13,12 @@ CREATE TABLE
     ENGINE=InnoDB DEFAULT CHARSET=latin1
     ALTER TABLE
     minimal.visitante ADD CONSTRAINT emailVisitante UNIQUE (email);
-    
+
+    CREATE TABLE
+    minimal.newsletter
+    (
+        email VARCHAR(255),
+        PRIMARY KEY (email),
+        CONSTRAINT email_mailing UNIQUE (email)
+    )
+    ENGINE=InnoDB DEFAULT CHARSET=latin1;

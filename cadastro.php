@@ -28,11 +28,19 @@
 		if(emailUnico($email,$conexao)){
 			$senha = md5($senha);
 			$sql = "INSERT INTO visitante (nome,email,senha) VALUES('{$nome}','{$email}','{$senha}');";
-			mysql_query($sql,$conexao);
+			mysql_query($sql,$conexao) or exit(mysql_error());
+			
+			if(!empty($_POST['news'])){
+				mysql_query("INSERT INTO newsletter values ('{$email}');") or exit(mysql_error());
+			}
+
 			header("Location: index.php");
+
 		} else {
 			$erro = "Endereço de email já cadastrado.";
 		}
+
+
 	}
 
 	function emailUnico($email,$conexao){
