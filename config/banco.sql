@@ -22,3 +22,14 @@ CREATE TABLE
         CONSTRAINT email_mailing UNIQUE (email)
     )
     ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+    CREATE TABLE
+    minimal.galeria
+    (
+        id INT NOT NULL AUTO_INCREMENT,
+        id_Visitante INT,
+        data DATE NOT NULL,
+        titulo VARCHAR(255) NOT NULL,
+        PRIMARY KEY (id)
+    )
+    ENGINE=InnoDB DEFAULT CHARSET=latin1
