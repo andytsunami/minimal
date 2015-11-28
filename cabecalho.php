@@ -26,6 +26,10 @@
             $("#cadastro").click(function(){
               $("#form").attr("action","cadastro.php").submit();
             });
+
+            $("#logar").click(function(){
+              $("#formLogin").attr("action","login.php").submit();
+            });
         });
         </script>
 
@@ -78,23 +82,24 @@
           <div id="modal1" class="modal">
             <div class="modal-content">
               <h4>Login</h4>
-              <form class="center">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Senha</label>
-        </div>
-      </div>
+              <form class="center" id="formLogin" method="post">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="email" class="validate" name="email">
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="password" type="password" class="validate" name="senha">
+                      <label for="password">Senha</label>
+                    </div>
+                  </div>
               </form>
             </div>
           <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-light btn-flat">Entrar</a>
+            <!-- button class="modal-action modal-close waves-effect waves-light btn-flat" id="logar">Entrar</button -->
+            <button class="modal-action modal-close waves-effect waves-light btn-flat" id="logar">Entrar</button>
             <a href="cadastro.php" class="waves-effect waves-light btn-flat">Cadastrar</a>
           </div>
         </div>
