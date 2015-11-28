@@ -437,3 +437,7 @@ article a{
   padding-top: 4em !important;
 }
 
+#newsLink{
+  cursor: pointer;
+}
+

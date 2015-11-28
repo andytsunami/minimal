@@ -42,6 +42,10 @@
             $("#logout").click(function(){
               window.location = "logout.php";
             });
+
+            $("#enviarNews").click(function(){
+              $("#newsForm").attr("action","newsletter.php").submit();
+            });
         });
         </script>
 
