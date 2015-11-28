@@ -1,5 +1,14 @@
 <?php 
   include("cabecalho.php");
+
+
+  $boasVindas = "Olá e bem vindo!";
+
+  if (!empty($_SESSION['nome'])) {
+    $boasVindas = "Olá {$_SESSION['nome']}, seja bem vindo!";
+  }
+
+
 ?>
 <!-- Fim do cabecalho -->
 <!-- Start Content -->
@@ -7,7 +16,7 @@
 <!-- Minimal Design Introduction -->
   <div class="mindesign" id="intro_site">
   <div class="container">
-  <h1>Olá e bem vindo!</h1>
+  <h1><?=$boasVindas?></h1>
   <p>Aqui no Minimal Design, você pode acessar nosso Blog para aprender mais sobre os conceitos de Design Minimalista, com áreas dedicadas para o Flat, Metro, Apple e Material Design.</p>
   </div>
   </div>

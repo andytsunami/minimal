@@ -34,11 +34,16 @@
 			$email = $visitante['email'];
 
 			if (!empty($id)) {
-				
+
+				session_start("visitante");
+
+				$_SESSION["logado"] = TRUE;
+				$_SESSION["id"] = $id;
+				$_SESSION["nome"] = $nome;
+				$_SESSION["email"] = $email;
 			}
 		}
-
-		//header("Location: index.php");
+		header("Location: index.php");
 
 	}
 

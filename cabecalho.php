@@ -1,3 +1,11 @@
+<?php 
+  if($_SESSION["logado"] != TRUE){
+    session_start("visitante");
+} else {
+  session_destroy();
+  
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   <html>
     <head>
@@ -30,6 +38,10 @@
             $("#logar").click(function(){
               $("#formLogin").attr("action","login.php").submit();
             });
+
+            $("#logout").click(function(){
+              window.location = "logout.php";
+            });
         });
         </script>
 
@@ -56,12 +68,22 @@
         <li><a href="blog.php">Blog</a></li>
         <li><a href="galeria.php">Galeria</a></li>
       </ul>
-      <ul class="right hide-on-med-and-down">
+<?php if (isset($_SESSION["logado"]) && $_SESSION["logado"] == TRUE) {   ?>
+          <ul class="right hide-on-med-and-down">
+            <li id="user_login">  
+            <!-- Modal Trigger -->
+            <button class="waves-effect waves-light btn blue" id="logout">Sair</button>
+            </li>
+          </ul>
+<?php } else { ?>
+     <ul class="right hide-on-med-and-down">
         <li id="user_login">  
         <!-- Modal Trigger -->
         <button data-target="modal1" class="waves-effect waves-light btn modal-trigger blue">Login</button>
         </li>
-      </ul>      
+      </ul>  
+      
+<?php }?>
       </div>
 
       <ul class="side-nav">
