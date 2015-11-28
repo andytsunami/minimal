@@ -34,6 +34,42 @@ CREATE TABLE
     )
     ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+    CREATE TABLE `minimal`.`tags` (
+      `id` INT NOT NULL AUTO_INCREMENT,
+      `tag` VARCHAR(255) NULL,
+      PRIMARY KEY (`id`),
+      UNIQUE INDEX `tag_UNIQUE` (`tag` ASC));
+
+    CREATE TABLE `minimal`.`tag_galeria` (
+  `id_tag` INT NOT NULL,
+  `id_galeria` INT NOT NULL,
+  PRIMARY KEY (`id_tag`, `id_galeria`),
+  INDEX `fk_galeria_idx` (`id_galeria` ASC),
+  CONSTRAINT `fk_galeria`
+    FOREIGN KEY (`id_galeria`)
+    REFERENCES `minimal`.`galeria` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_tag`
+    FOREIGN KEY (`id_tag`)
+    REFERENCES `minimal`.`tags` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+    
+ALTER TABLE `minimal`.`galeria` 
+CHANGE COLUMN `id_Visitante` `id_Visitante` INT(11) NOT NULL ,
+ADD INDEX `fk_visitante_idx` (`id_Visitante` ASC);
+ALTER TABLE `minimal`.`galeria` 
+ADD CONSTRAINT `fk_visitante`
+  FOREIGN KEY (`id_Visitante`)
+  REFERENCES `minimal`.`visitante` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+
+
+
 CREATE DATABASE minimal;
 USE minimal;
 CREATE TABLE galeria (id int NOT NULL AUTO_INCREMENT, id_Visitante int, data date NOT NULL, titulo varchar(255) NOT NULL, PRIMARY KEY (id)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
