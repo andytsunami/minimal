@@ -1,6 +1,23 @@
 <?php 
   include("cabecalho.php");
 
+  ini_set('display_errors', 'on');
+
+  require_once 'config.php';
+  
+  $conexao = @mysql_connect($host, $usuario, $senha) or exit(mysql_error());
+  mysql_set_charset("utf8", $conexao);
+  
+  mysql_select_db($banco);
+
+  $listaGaleria = "select g.titulo as titulo,v.nome as nomeVisitante, g.data as dtEnvio, g.imagem imagem, v.id as idVisitante, g.id as idGaleria from galeria g 
+                    left join visitante v on v.id = g.id_visitante order by g.data desc;";
+
+  $sqlTag = "select t.tag as tag from tag_galeria tg
+            left join tags t on t.id = tg.id_tag
+            where tg.id_galeria = ";
+
+  $query = mysql_query($listaGaleria, $conexao);
 
 ?>
   <div class="navbar-fixed" id="sub-nav">
@@ -32,135 +49,51 @@
 <div class="container">
 
   <div class="row">
-  
+    
+    <?php 
+      if(mysql_num_rows($query)){
+        while ($result = mysql_fetch_array($query)) {
+          
+    ?>
       <div class="col s4">
       <article class="gallery_project">
-      <a href="#"><image class="gallery_image" src="images/gallery/project_03.jpg"></a>
+      <a href="#"><img class="gallery_image" 
+      <?php 
+        echo 'src="data:image/jpeg;base64,'.base64_encode($result["imagem"]).'"'; ?>
+      ></a>
       <div class="gallery_text">
-      <h1>Neebo</h1>
-      <h2>Enviado 12/11/2015 por <a href="#">Nome da Pessoa</a></h2>
+      <h1><?=$result['titulo']?></h1>
+      <h2>Enviado <?=date('d/m/Y',strtotime($result["dtEnvio"]))?> por <a href="#"><?=$result['nomeVisitante']?></a></h2>
       </div>
       <div class="gallery_tags">
-      <h3>Tags:  <a href="#">Apple Design</a>, <a href="#">Landing Page</a>, <a href="#">Project</a>.</h3>
+      <h3>Tags:  
+        <?php 
+          
+          $sqlTg = $sqlTag . $result["idGaleria"];
+
+          //echo "<h1>{$sqlTag}</h1>";
+          $resltTag = mysql_query($sqlTg,$conexao);
+
+          if(mysql_num_rows($resltTag)){
+              while ($tg = mysql_fetch_array($resltTag)) {
+
+            ?>
+            <a href="#"><?=$tg["tag"]?></a>,
+        <?php }} ?>
+
+        
+
+      </h3>
       </div>
       </article>
       </div>
 
-      <div class="col s4">
-      <article class="gallery_project">
-      <a href="#"><image class="gallery_image" src="images/gallery/project_02.jpg"></a>
-      <div class="gallery_text">
-      <h1>Materil</h1>
-      <h2>Enviado 12/11/2015 por <a href="#">Nome da Pessoa</a></h2>
-      </div>
-      <div class="gallery_tags">
-      <h3>Tags:  <a href="#">Material Design</a>, <a href="#">Website</a>, <a href="#">Dashboard</a>.</h3>
-      </div>
-      </article>
-      </div>
-
-      <div class="col s4">
-      <article class="gallery_project">
-      <a href="#"><image class="gallery_image" src="images/gallery/project_01.jpg"></a>
-      <div class="gallery_text">
-      <h1>Flagsmith</h1>
-      <h2>Enviado 12/11/2015 por <a href="#">Nome da Pessoa</a></h2>
-      </div>
-      <div class="gallery_tags">
-      <h3>Tags:  <a href="#">Flat Design</a>, <a href="#">Website</a>, <a href="#">Project</a>.</h3>
-      </div>
-      </article>
-      </div>
+      <?php }} ?>
 
   </div>
 
-  <div class="row">
   
-      <div class="col s4">
-      <article class="gallery_project">
-      <a href="#"><image class="gallery_image" src="images/gallery/project_03.jpg"></a>
-      <div class="gallery_text">
-      <h1>Neebo</h1>
-      <h2>Enviado 12/11/2015 por <a href="#">Nome da Pessoa</a></h2>
-      </div>
-      <div class="gallery_tags">
-      <h3>Tags:  <a href="#">Apple Design</a>, <a href="#">Landing Page</a>, <a href="#">Project</a>.</h3>
-      </div>
-      </article>
-      </div>
-
-      <div class="col s4">
-      <article class="gallery_project">
-      <a href="#"><image class="gallery_image" src="images/gallery/project_02.jpg"></a>
-      <div class="gallery_text">
-      <h1>Materil</h1>
-      <h2>Enviado 12/11/2015 por <a href="#">Nome da Pessoa</a></h2>
-      </div>
-      <div class="gallery_tags">
-      <h3>Tags:  <a href="#">Material Design</a>, <a href="#">Website</a>, <a href="#">Dashboard</a>.</h3>
-      </div>
-      </article>
-      </div>
-
-      <div class="col s4">
-      <article class="gallery_project">
-      <a href="#"><image class="gallery_image" src="images/gallery/project_01.jpg"></a>
-      <div class="gallery_text">
-      <h1>Flagsmith</h1>
-      <h2>Enviado 12/11/2015 por <a href="#">Nome da Pessoa</a></h2>
-      </div>
-      <div class="gallery_tags">
-      <h3>Tags:  <a href="#">Flat Design</a>, <a href="#">Website</a>, <a href="#">Project</a>.</h3>
-      </div>
-      </article>
-      </div>
-
-  </div>
-
-  <div class="row">
-  
-      <div class="col s4">
-      <article class="gallery_project">
-      <a href="#"><image class="gallery_image" src="images/gallery/project_03.jpg"></a>
-      <div class="gallery_text">
-      <h1>Neebo</h1>
-      <h2>Enviado 12/11/2015 por <a href="#">Nome da Pessoa</a></h2>
-      </div>
-      <div class="gallery_tags">
-      <h3>Tags:  <a href="#">Apple Design</a>, <a href="#">Landing Page</a>, <a href="#">Project</a>.</h3>
-      </div>
-      </article>
-      </div>
-
-      <div class="col s4">
-      <article class="gallery_project">
-      <a href="#"><image class="gallery_image" src="images/gallery/project_02.jpg"></a>
-      <div class="gallery_text">
-      <h1>Materil</h1>
-      <h2>Enviado 12/11/2015 por <a href="#">Nome da Pessoa</a></h2>
-      </div>
-      <div class="gallery_tags">
-      <h3>Tags:  <a href="#">Material Design</a>, <a href="#">Website</a>, <a href="#">Dashboard</a>.</h3>
-      </div>
-      </article>
-      </div>
-
-      <div class="col s4">
-      <article class="gallery_project">
-      <a href="#"><image class="gallery_image" src="images/gallery/project_01.jpg"></a>
-      <div class="gallery_text">
-      <h1>Flagsmith</h1>
-      <h2>Enviado 12/11/2015 por <a href="#">Nome da Pessoa</a></h2>
-      </div>
-      <div class="gallery_tags">
-      <h3>Tags:  <a href="#">Flat Design</a>, <a href="#">Website</a>, <a href="#">Project</a>.</h3>
-      </div>
-      </article>
-      </div>
-
-  </div>
-
-  <div class="row">
+  <!-- div class="row">
   <ul class="pagination centered">
     <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
     <li class="active blue"><a href="#!">1</a></li>
@@ -174,7 +107,7 @@
     <li class="waves-effect"><a href="#!">9</a></li>
     <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
   </ul>
-  </div>
+  </div -->
 
 </div>
 </div>

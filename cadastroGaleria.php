@@ -71,7 +71,9 @@
 		$result = mysql_query("select id from tags where tag = '{$tag}';",$conexao) or exit(mysql_error());
 		$retorno = mysql_result($result, 0);
 
-		if(retorno > 0){
+		//echo "<h1>{$retorno}</h1>";
+
+		if($retorno > 0){
 			return $retorno;
 		} else {
 			return 0;

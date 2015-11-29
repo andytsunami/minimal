@@ -73,6 +73,10 @@ ADD COLUMN `imagem` BLOB NOT NULL AFTER `titulo`;
 ALTER TABLE `minimal`.`galeria` 
 CHANGE COLUMN `imagem` `imagem` LONGBLOB NOT NULL ;
 
+ALTER TABLE `minimal`.`galeria` 
+CHANGE COLUMN `data` `data` DATETIME NOT NULL ;
+
+
 
 
 CREATE DATABASE minimal;
