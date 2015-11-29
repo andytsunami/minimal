@@ -10,10 +10,22 @@
   
   mysql_select_db($banco);
 
-  $listaGaleria = "select g.titulo as titulo,v.nome as nomeVisitante, g.data as dtEnvio, g.imagem imagem, v.id as idVisitante, g.id as idGaleria from galeria g 
-                    left join visitante v on v.id = g.id_visitante order by g.data desc;";
+  $listaGaleria = "";
 
-  $sqlTag = "select t.tag as tag from tag_galeria tg
+  if(isset($_GET['tag']) AND !empty($_GET['tag'])){
+                    $listaGaleria = "select g.titulo as titulo,v.nome as nomeVisitante, g.data as dtEnvio, g.imagem imagem, v.id as idVisitante, g.id as idGaleria from galeria g 
+                    left join visitante v on v.id = g.id_visitante 
+                    left join tag_galeria tg on tg.id_galeria = g.id
+                    where tg.id_tag = {$_GET['tag']}
+                    order by g.data desc;";
+  } else {
+       $listaGaleria = "select g.titulo as titulo,v.nome as nomeVisitante, g.data as dtEnvio, g.imagem imagem, v.id as idVisitante, g.id as idGaleria from galeria g 
+                    left join visitante v on v.id = g.id_visitante order by g.data desc;";
+  }
+
+  //echo "<h1>{$listaGaleria}</h1>";
+
+  $sqlTag = "select t.id as id,t.tag as tag from tag_galeria tg
             left join tags t on t.id = tg.id_tag
             where tg.id_galeria = ";
 
@@ -30,11 +42,11 @@
 
       <!-- Menu Links -->
       <ul class="left hide-on-med-and-down sub-nav" id="sub-nav">
-        <li><a href="#" class="sub-nav-line">Novidades</a></li>
-        <li><a href="#" class="sub-nav-line">Flat Design</a></li>
-        <li><a href="#" class="sub-nav-line">Metro Design</a></li>
-        <li><a href="#" class="sub-nav-line">Apple Design</a></li>
-        <li><a href="#" class="sub-nav-line">Material Design</a></li>        
+        <li><a href="galeria.php" class="sub-nav-line">Novidades</a></li>
+        <li><a href="galeria.php?tag=3" class="sub-nav-line">Flat Design</a></li>
+        <li><a href="galeria.php?tag=4" class="sub-nav-line">Metro Design</a></li>
+        <li><a href="galeria.php?tag=5" class="sub-nav-line">Apple Design</a></li>
+        <li><a href="galeria.php?tag=1" class="sub-nav-line">Material Design</a></li>        
       </ul>
       <?php if (isset($_SESSION["logado"]) && $_SESSION["logado"] == TRUE) {   ?>
         <a class="waves-effect waves-light btn blue right public" href="cadastroGaleria.php">Publicar</a>
@@ -78,7 +90,7 @@
               while ($tg = mysql_fetch_array($resltTag)) {
 
             ?>
-            <a href="#"><?=$tg["tag"]?></a>,
+            <a href="galeria.php?tag=<?=$tg["id"]?>"><?=$tg["tag"]?></a>,
         <?php }} ?>
 
         
