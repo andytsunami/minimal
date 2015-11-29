@@ -56,7 +56,7 @@ CREATE TABLE
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
-    
+
 ALTER TABLE `minimal`.`galeria` 
 CHANGE COLUMN `id_Visitante` `id_Visitante` INT(11) NOT NULL ,
 ADD INDEX `fk_visitante_idx` (`id_Visitante` ASC);
@@ -67,6 +67,11 @@ ADD CONSTRAINT `fk_visitante`
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
 
+  ALTER TABLE `minimal`.`galeria` 
+ADD COLUMN `imagem` BLOB NOT NULL AFTER `titulo`;
+
+ALTER TABLE `minimal`.`galeria` 
+CHANGE COLUMN `imagem` `imagem` LONGBLOB NOT NULL ;
 
 
 

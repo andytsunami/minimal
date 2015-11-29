@@ -1,6 +1,7 @@
 <?php 
   if($_SESSION["logado"] != TRUE){
     session_start("visitante");
+    
 } else {
   session_destroy();
   
@@ -45,6 +46,10 @@
 
             $("#enviarNews").click(function(){
               $("#newsForm").attr("action","newsletter.php").submit();
+            });
+
+            $("#publicar").click(function(){
+              $("#formGaleria").attr("action","cadastroGaleria.php").submit();
             });
         });
         </script>

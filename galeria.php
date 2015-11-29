@@ -1,10 +1,4 @@
 <?php 
-  if($_SESSION["logado"] != TRUE){
-    session_start("visitante");
-} else {
-  session_destroy();
-  
-}
   include("cabecalho.php");
 
 
@@ -25,7 +19,9 @@
         <li><a href="#" class="sub-nav-line">Apple Design</a></li>
         <li><a href="#" class="sub-nav-line">Material Design</a></li>        
       </ul>
-      <a class="waves-effect waves-light btn blue right public" href="cadastroGaleria.php">Publicar</a>
+      <?php if (isset($_SESSION["logado"]) && $_SESSION["logado"] == TRUE) {   ?>
+        <a class="waves-effect waves-light btn blue right public" href="cadastroGaleria.php">Publicar</a>
+      <?php }?>  
     </div>
     </div>
   </nav>
