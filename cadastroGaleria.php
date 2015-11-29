@@ -6,8 +6,6 @@
 		header("Location: galeria.php");
 	}
 
-	print_r($_SESSION);
-
 	ini_set('display_errors', 'on');
 
 	require_once 'config.php';
@@ -26,22 +24,61 @@
 
 	if($preenchido){
 		$imagem = $_FILES["imagem"];
-		$titulo = $_POST["titulo"];
-		$tags = $_POST["tags"];
+		$titulo = htmlentities($_POST['titulo'],ENT_QUOTES);
+		$tags = htmlentities($_POST['tags'],ENT_QUOTES);
 
 		$tamanho = filesize($imagem["tmp_name"]);
 		$mysqlImg = addslashes(fread(fopen($imagem["tmp_name"], "r"), $tamanho));
 
-		print_r($idVisitante);
-
 		$sql = "INSERT INTO `galeria` (`id_Visitante`, `data`, `titulo`, `imagem`) VALUES ('{$idVisitante}', now(), '{$titulo}', '{$mysqlImg}');";
 
-		mysql_query($sql) or exit(mysql_error());
+		mysql_query($sql,$conexao) or exit(mysql_error());
+
+		$idGaleria = mysql_insert_id();
+
+		$tags = explode(";", $tags);
+
+		foreach ($tags as $tag) {
+			$idTag = insereTag(trim($tag),$conexao);
+
+			$relacionamento = "INSERT INTO `tag_galeria` (`id_tag`, `id_galeria`) VALUES ('{$idTag}', '{$idGaleria}');";
+
+			mysql_query($relacionamento,$conexao);
+		}
+
 
 		header("Location: galeria.php");
 	}
 	
-	mysql_close();
+	
+
+	function insereTag($tag,$conexao){
+
+		$idTag = verificaTag($tag,$conexao);
+
+		if($idTag > 0){
+			return $idTag;
+		} else {
+			$insert = "INSERT INTO tags (`tag`) VALUES ('{$tag}');";
+			mysql_query($insert,$conexao);
+			$idTag = mysql_insert_id();
+			return $idTag;
+		}
+
+	}
+
+	function verificaTag($tag, $conexao){
+		$result = mysql_query("select id from tags where tag = '{$tag}';",$conexao) or exit(mysql_error());
+		$retorno = mysql_result($result, 0);
+
+		if(retorno > 0){
+			return $retorno;
+		} else {
+			return 0;
+		}
+	}
+
+	mysql_close($conexao);
 	 	
 ?>
 
