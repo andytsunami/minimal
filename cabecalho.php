@@ -1,7 +1,7 @@
 <?php 
   if($_SESSION["logado"] != TRUE){
     session_start("visitante");
-    
+
 } else {
   session_destroy();
   
@@ -64,7 +64,7 @@
   <nav class="no-shadow">
     <div class="nav-wrapper grey darken-4">
     <div class="container">
-      <a href="#" class="brand-logo">Minimal Design</a>
+      <a href="index.php" class="brand-logo">Minimal Design</a>
 
 
       <!-- Mobile Hamburguer Icon -->
