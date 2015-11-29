@@ -276,12 +276,12 @@ nav ul a {
   border: 1px solid #eaebec;
 }
 
-#sub-nav {
+.sub-nav {
   height: 50px;
   margin-top: 0px;
 }
 
-#sub-nav-line {
+.sub-nav-line {
   font-size: 15px;
   line-height: 50px;
 }
@@ -439,5 +439,9 @@ article a{
 
 #newsLink{
   cursor: pointer;
+}
+
+.public{
+  margin-top: 0.4em !important;
 }
 

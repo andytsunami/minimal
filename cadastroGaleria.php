@@ -1,5 +1,5 @@
 <?php 
-	ini_set('display_errors', 'on');
+	//ini_set('display_errors', 'on');
 	require_once 'config.php';
 	header('Content-Type: text/html; charset=utf-8');
 	

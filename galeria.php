@@ -1,8 +1,16 @@
 <?php 
+  if($_SESSION["logado"] != TRUE){
+    session_start("visitante");
+} else {
+  session_destroy();
+  
+}
   include("cabecalho.php");
+
+
 ?>
   <div class="navbar-fixed" id="sub-nav">
-  <nav class="no-shadow" id="sub-nav">
+  <nav class="no-shadow sub-nav" id="sub-nav">
     <div class="nav-wrapper grey darken-2" id="sub-nav">
     <div class="container">
 
@@ -10,14 +18,15 @@
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
       <!-- Menu Links -->
-      <ul class="left hide-on-med-and-down" id="sub-nav">
-        <li><a href="#" id="sub-nav-line">Novidades</a></li>
-        <li><a href="#" id="sub-nav-line">Flat Design</a></li>
-        <li><a href="#" id="sub-nav-line">Metro Design</a></li>
-        <li><a href="#" id="sub-nav-line">Apple Design</a></li>
-        <li><a href="#" id="sub-nav-line">Material Design</a></li>
+      <ul class="left hide-on-med-and-down sub-nav" id="sub-nav">
+        <li><a href="#" class="sub-nav-line">Novidades</a></li>
+        <li><a href="#" class="sub-nav-line">Flat Design</a></li>
+        <li><a href="#" class="sub-nav-line">Metro Design</a></li>
+        <li><a href="#" class="sub-nav-line">Apple Design</a></li>
+        <li><a href="#" class="sub-nav-line">Material Design</a></li>        
       </ul>
-      </div>
+      <a class="waves-effect waves-light btn blue right public" href="cadastroGaleria.php">Publicar</a>
+    </div>
     </div>
   </nav>
   </div>
