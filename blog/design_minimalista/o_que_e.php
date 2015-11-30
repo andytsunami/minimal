@@ -44,53 +44,53 @@
     <li>
       <div class="collapsible-header active">Design Minimalista</div>
       <div class="collapsible-body">
-      <a href="#!" class="collection-item active">O que é</a>
-      <a href="#!" class="collection-item">Diferenças entre Arte e Design</a>
-      <a href="#!" class="collection-item">Conceitos</a>
-      <a href="#!" class="collection-item">Minimalismo em User Interfaces</a>
-      <a href="#!" class="collection-item">Outras aplicações</a>
+      <a href="o_que_e.php" class="collection-item active">O que é</a>
+      <a href="diferenca.php" class="collection-item">Diferenças entre Arte e Design</a>
+      <a href="conceitos.php" class="collection-item">Conceitos</a>
+      <a href="minimalismo.php" class="collection-item">Minimalismo em User Interfaces</a>
+      <a href="outras" class="collection-item">Outras aplicações</a>
       </div>
     </li>
     <li>
       <div class="collapsible-header">User Experience</div>
       <div class="collapsible-body">
-      <a href="#!" class="collection-item">O que é</a>
-      <a href="#!" class="collection-item">Conceitos</a>
-      <a href="#!" class="collection-item">Como utilizar</a>
-      <a href="#!" class="collection-item">Aplicações</a>
+      <a href="../ux/o_que_e.php" class="collection-item">O que é</a>
+      <a href="../ux/conceitos.php" class="collection-item">Conceitos</a>
+      <a href="../ux/como.php" class="collection-item">Como utilizar</a>
+      <a href="../ux/aplicacoes.php" class="collection-item">Aplicações</a>
       </div>
     </li>
     <li>
       <div class="collapsible-header">Flat Design</div>
       <div class="collapsible-body">
-      <a href="#!" class="collection-item">Origem</a>
-      <a href="#!" class="collection-item">Conceitos</a>
-      <a href="#!" class="collection-item">Skeuemorphic vs Flat</a>
-      <a href="#!" class="collection-item">Vantagens</a>
+      <a href="../flat/origem.php" class="collection-item">Origem</a>
+      <a href="../flat/conceitos.php" class="collection-item">Conceitos</a>
+      <a href="../flat/ske.php" class="collection-item">Skeuemorphic vs Flat</a>
+      <a href="../flat/vantagens.php" class="collection-item">Vantagens</a>
       </div>
     </li>
     <li>
       <div class="collapsible-header">Metro Design</div>
       <div class="collapsible-body">
-      <a href="#!" class="collection-item">História</a>
-      <a href="#!" class="collection-item">Conceitos</a>
-      <a href="#!" class="collection-item">Aplicações</a>
+      <a href="../metro/historia.php" class="collection-item">História</a>
+      <a href="../metro/conceitos.php" class="collection-item">Conceitos</a>
+      <a href="../metro/aplicacoes.php" class="collection-item">Aplicações</a>
       </div>
     </li>
     <li>
       <div class="collapsible-header">Apple Design</div>
       <div class="collapsible-body">
-      <a href="#!" class="collection-item">História</a>
-      <a href="#!" class="collection-item">Conceitos</a>
-      <a href="#!" class="collection-item">Aplicações</a>
+      <a href="../apple/" class="collection-item">História</a>
+      <a href="../apple/" class="collection-item">Conceitos</a>
+      <a href="../apple/" class="collection-item">Aplicações</a>
       </div>
     </li>
     <li>
       <div class="collapsible-header">Material Design</div>
       <div class="collapsible-body">
-      <a href="#!" class="collection-item">História</a>
-      <a href="#!" class="collection-item">Conceitos</a>
-      <a href="#!" class="collection-item">Aplicações</a>
+      <a href="../material/historia.php'" class="collection-item">História</a>
+      <a href="../material/conceitos.php" class="collection-item">Conceitos</a>
+      <a href="../material/aplicacoes.php" class="collection-item">Aplicações</a>
       </div>
     </li>
 
