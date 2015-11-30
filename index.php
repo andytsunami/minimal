@@ -1,5 +1,6 @@
 <?php 
   include("cabecalho.php");
+  ini_set('display_errors', 'on');
 
 
   $boasVindas = "Olá e bem vindo!";
@@ -8,6 +9,101 @@
     $boasVindas = "Olá {$_SESSION['nome']}, seja bem vindo!";
   }
 
+  require_once 'config.php';
+  
+  $conexao = @mysql_connect($host, $usuario, $senha) or exit(mysql_error());
+  mysql_set_charset("utf8", $conexao);
+  
+  mysql_select_db($banco);
+
+  $sqlMetro = "select g.titulo as titulo, g.data as dtEnvio, g.imagem imagem
+ from galeria g 
+ left join tag_galeria tg on tg.id_galeria = g.id
+ where tg.id_tag = 4
+ order by g.data desc limit 3;";
+
+  $sqlApple = "select g.titulo as titulo, g.data as dtEnvio, g.imagem imagem
+ from galeria g 
+ left join tag_galeria tg on tg.id_galeria = g.id
+ where tg.id_tag = 5
+ order by g.data desc limit 3;";
+
+  $sqlMaterial = "select g.titulo as titulo, g.data as dtEnvio, g.imagem imagem
+ from galeria g 
+ left join tag_galeria tg on tg.id_galeria = g.id
+ where tg.id_tag = 1
+ order by g.data desc limit 3;";
+
+ $sqlFlat = "select g.titulo as titulo, g.data as dtEnvio, g.imagem imagem
+ from galeria g 
+ left join tag_galeria tg on tg.id_galeria = g.id
+ where tg.id_tag = 3
+ order by g.data desc limit 3;";
+
+
+ $queryMetro = mysql_query($sqlMetro, $conexao);
+ $queryApple = mysql_query($sqlApple, $conexao);
+ $queryMaterial = mysql_query($sqlMaterial, $conexao);
+ $queryFlat = mysql_query($sqlFlat, $conexao);
+
+ $countMetro = 0;
+ $countApple = 0;
+ $countMaterial = 0;
+ $countFlat = 0;
+
+ function getMes($data){
+
+  $mes = explode("-", $data);
+  $mes = $mes[1];
+  
+
+  switch ($mes) {
+    case 1:
+      $mes = "Janeiro";
+      break;
+      case 2:
+      $mes = "Fevereiro";
+      break;
+      case 3:
+      $mes = "Março";
+      break;
+      case 4:
+      $mes = "Abril";
+      break;
+      case 5:
+      $mes = "Maio";
+      break;
+      case 6:
+      $mes = "Junho";
+      break;
+      case 7:
+      $mes = "Julho";
+      break;
+      case 8:
+      $mes = "Agosto";
+      break;
+      case 9:
+      $mes = "Setembro";
+      break;
+      case 10:
+      $mes = "Outubro";
+      break;
+      case 11:
+      $mes = "Novembro";
+      break;
+      case 12:
+      $mes = "Dezembro";
+      break;
+    
+    default:
+     $mes = "Indefinido";
+      break;
+  }
+
+    echo $mes;
+
+ }
+ 
 
 ?>
 <!-- Fim do cabecalho -->
@@ -91,20 +187,25 @@
     </div>
 
     <div class="row">
+      <?php 
+        if (mysql_num_rows($queryFlat)) {
+            while ($resultFlat = mysql_fetch_array($queryFlat)) {
+
+      ?>
       <div class="col s4">
-      <div class="best_flat waves-effect" id="flat_1"><div class="best_title"><h1>Watches</h1><h2>Rank 1 - Novembro</h2></div></div>
+        <div class="best_flat waves-effect rank" style="background:      
+        <?php 
+          echo 'url(data:image/jpeg;base64,'.base64_encode($resultFlat["imagem"]).');'; ?>"
+      > <!-- Fecha div-->
+         <div class="best_title"><h1><?=$resultFlat['titulo']?></h1><h2>Rank <?= ++$countFlat?> - <?=getMes($resultFlat['dtEnvio'])?></h2></div></div>
       </div>
-      <div class="col s4">
-      <div class="best_flat waves-effect" id="flat_2"><div class="best_title"><h1>Hello Baby</h1><h2>Rank 2 - Novembro</h2></div></div>
-      </div>
-      <div class="col s4">
-      <div class="best_flat waves-effect" id="flat_3"><div class="best_title"><h1>Flagsmith</h1><h2>Rank 3 - Novembro</h2></div></div>
-      </div>
+
+      <?php }} ?>
     </div>
 
     <div class="row">
     <div class="col s2 offset-s10">
-    <a class="waves-effect waves-light btn blue">Ver mais</a>
+    <a class="waves-effect waves-light btn blue" href="galeria.php?tag=4">Ver mais</a>
     </div>
     </div>
 
@@ -123,15 +224,20 @@
     </div>
 
     <div class="row">
+      <?php 
+        if (mysql_num_rows($queryMetro)) {
+            while ($resultMetro = mysql_fetch_array($queryMetro)) {
+
+      ?>
       <div class="col s4">
-      <div class="best_flat waves-effect" id="metro_1"><div class="best_title"><h1>Microsoft Mobile</h1><h2>Rank 1 - Novembro</h2></div></div>
+        <div class="best_flat waves-effect rank" style="background:      
+        <?php 
+          echo 'url(data:image/jpeg;base64,'.base64_encode($resultMetro["imagem"]).');'; ?>"
+      > <!-- Fecha div-->
+         <div class="best_title"><h1><?=$resultMetro['titulo']?></h1><h2>Rank <?= ++$countMetro?> - <?=getMes($resultMetro['dtEnvio'])?></h2></div></div>
       </div>
-      <div class="col s4">
-      <div class="best_flat waves-effect" id="metro_2"><div class="best_title"><h1>XBOX</h1><h2>Rank 2 - Novembro</h2></div></div>
-      </div>
-      <div class="col s4">
-      <div class="best_flat waves-effect" id="metro_3"><div class="best_title"><h1>The Verge</h1><h2>Rank 3 - Novembro</h2></div></div>
-      </div>
+
+      <?php }} ?>
     </div>
 
     <div class="row">
@@ -154,15 +260,20 @@
     </div>
 
     <div class="row">
+      <?php 
+        if (mysql_num_rows($queryApple)) {
+            while ($resultApple = mysql_fetch_array($queryApple)) {
+
+      ?>
       <div class="col s4">
-      <div class="best_flat waves-effect" id="apple_1"><div class="best_title"><h1>Neeo</h1><h2>Rank 1 - Novembro</h2></div></div>
+        <div class="best_flat waves-effect rank" style="background:      
+        <?php 
+          echo 'url(data:image/jpeg;base64,'.base64_encode($resultApple["imagem"]).');'; ?>"
+      > <!-- Fecha div-->
+         <div class="best_title"><h1><?=$resultApple['titulo']?></h1><h2>Rank <?= ++$countApple?> - <?=getMes($resultApple['dtEnvio'])?></h2></div></div>
       </div>
-      <div class="col s4">
-      <div class="best_flat waves-effect" id="apple_2"><div class="best_title"><h1>Apple</h1><h2>Rank 2 - Novembro</h2></div></div>
-      </div>
-      <div class="col s4">
-      <div class="best_flat waves-effect" id="apple_3"><div class="best_title"><h1>Wlppr</h1><h2>Rank 3 - Novembro</h2></div></div>
-      </div>
+
+      <?php }} ?>
     </div>
 
     <div class="row">
@@ -184,16 +295,21 @@
     </div>
     </div>
 
-    <div class="row">
+     <div class="row">
+      <?php 
+        if (mysql_num_rows($queryMaterial)) {
+            while ($resultMaterial = mysql_fetch_array($queryMaterial)) {
+
+      ?>
       <div class="col s4">
-      <div class="best_flat waves-effect" id="material_1"><div class="best_title"><h1>Facebook Redesign</h1><h2>Rank 1 - Novembro</h2></div></div>
+        <div class="best_flat waves-effect rank" style="background:      
+        <?php 
+          echo 'url(data:image/jpeg;base64,'.base64_encode($resultMaterial["imagem"]).');'; ?>"
+      > <!-- Fecha div-->
+         <div class="best_title"><h1><?=$resultMaterial['titulo']?></h1><h2>Rank <?= ++$countMaterial?> - <?=getMes($resultMaterial['dtEnvio'])?></h2></div></div>
       </div>
-      <div class="col s4">
-      <div class="best_flat waves-effect" id="material_2"><div class="best_title"><h1>Materialism</h1><h2>Rank 2 - Novembro</h2></div></div>
-      </div>
-      <div class="col s4">
-      <div class="best_flat waves-effect" id="material_3"><div class="best_title"><h1>Amazon Redesign</h1><h2>Rank 3 - Novembro</h2></div></div>
-      </div>
+
+      <?php }} ?>
     </div>
 
     <div class="row">
