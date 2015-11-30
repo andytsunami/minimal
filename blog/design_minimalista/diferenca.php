@@ -80,9 +80,9 @@
     <li>
       <div class="collapsible-header">Apple Design</div>
       <div class="collapsible-body">
-      <a href="../apple/" class="collection-item">História</a>
-      <a href="../apple/" class="collection-item">Conceitos</a>
-      <a href="../apple/" class="collection-item">Aplicações</a>
+      <a href="../apple/historia.php" class="collection-item">História</a>
+      <a href="../apple/conceitos.php" class="collection-item">Conceitos</a>
+      <a href="../apple/apicacoes.php" class="collection-item">Aplicações</a>
       </div>
     </li>
     <li>
