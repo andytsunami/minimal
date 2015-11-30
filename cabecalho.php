@@ -52,6 +52,12 @@
             $("#publicar").click(function(){
               $("#formGaleria").attr("action","cadastroGaleria.php").submit();
             });
+
+            $(".clica").click(function(){
+              //window.location = "blog.php";
+              window.location = $(this).attr("data-local");            
+
+            });
         });
         </script>
 

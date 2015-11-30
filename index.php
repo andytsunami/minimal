@@ -123,7 +123,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col s4 visite-container blog_intro_text">
+      <div class="col s4 visite-container blog_intro_text clica" data-local="blog/design_minimalista/o_que_e.php">
         <img src="images/icon_designminimalista.svg" class="icon-design-minimalista" style="margin-left: -10px;">
         <div class="visite">
           <h1>Design Minimalista</h1></a>
@@ -131,7 +131,7 @@
         </div>
       </div>
 
-      <div class="col s4 visite-container blog_intro_text">
+      <div class="col s4 visite-container blog_intro_text clica" data-local="blog/ux/o_que_e.php">
         <img src="images/icon_userexperience.svg" class="icon-design-minimalista">
         <div class="visite">
           <h1>User Experience</h1></a>
@@ -139,7 +139,7 @@
         </div>
       </div>
 
-      <div class="col s4 visite-container blog_intro_text">
+      <div class="col s4 visite-container blog_intro_text clica" data-local="blog/flat/origem.php">
         <img src="images/icon_flatdesign.svg" class="icon-design-minimalista">
         <div class="visite">
           <h1>Flat Design</h1></a>
@@ -148,7 +148,7 @@
       </div>
   
       <div class="row">
-        <div class="col s4 visite-container blog_intro_text">
+        <div class="col s4 visite-container blog_intro_text clica" data-local="blog/metro/historia.php">
           <img src="images/icon_metrodesign.svg" class="icon-design-minimalista">
           <div class="visite">
             <h1>Metro Design</h1></a>
@@ -156,7 +156,7 @@
           </div>
         </div>
 
-        <div class="col s4 visite-container blog_intro_text">
+        <div class="col s4 visite-container blog_intro_text clica" data-local="blog/apple/historia.php">
           <img src="images/icon_appledesign.svg" class="icon-design-minimalista">
           <div class="visite">
             <h1>Apple Design</h1></a>
@@ -164,7 +164,7 @@
           </div>
         </div>
 
-        <div class="col s4 visite-container blog_intro_text">
+        <div class="col s4 visite-container blog_intro_text clica" data-local="blog/material/historia.php">
           <img src="images/icon_materialdesign.svg" class="icon-design-minimalista">
           <div class="visite">
             <h1>Material Design</h1></a>

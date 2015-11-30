@@ -82,8 +82,8 @@
     <li>
       <div class="collapsible-header">Material Design</div>
       <div class="collapsible-body">
-      <a href="blog/material/historia.php'" class="collection-item">História</a>
-      <a href="blog/material/conceitos.php" class="collection-item">Conceitos</a>
+      <a href="blog/material/historia.php" class="collection-item">História</a>
+      <a href="blog/material/conceito.php" class="collection-item">Conceitos</a>
       <a href="blog/material/aplicacoes.php" class="collection-item">Aplicações</a>
       </div>
     </li>
