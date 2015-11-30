@@ -111,6 +111,9 @@
 
 </div>
 </div>
+
+<div class="fixo">
 <?php 
   include("../../rodape.php");
 ?>
+</div>

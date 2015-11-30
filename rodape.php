@@ -4,7 +4,7 @@
   <div class="footer-copyright">
     <div class="container">
       © 2015 Minimal Design - Universidade Anhembi Morumbi
-      <a class="white-text right" href="sobre_nos.php" style="margin-left: 20px;">Sobre Nos</a>
+      <a class="white-text right" href="sobre.php" style="margin-left: 20px;">Sobre Nos</a>
       <a data-target="modalNews" class="white-text right modal-trigger" id="newsLink">Inscrever-se</a>
     </div>
   </div>

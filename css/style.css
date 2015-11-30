@@ -403,6 +403,7 @@ article a{
 
 .fixo{
 
+  
    position:fixed !important;
    left:0px !important;
    bottom:0px !important;
@@ -453,4 +454,139 @@ article a{
   -o-background-size: cover !important;
   background-size: cover !important;
   background-position: center !important;
+}
+
+.grid {
+    margin: 0 auto;
+    /*max-width: 1140px;*/
+    position: relative;
+    width: 95%;
+}
+.grid::after, .grid::before {
+    content: "";
+    display: table;
+}
+.grid::after {
+    clear: both;
+}
+.grid .grid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+circle-grid .item {
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 1140px;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+}
+.circle-grid .item .node {
+    padding: 0 32px 32px;
+}
+@media screen and (min-width: 568px) {
+.circle-grid .item {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+}
+@media screen and (min-width: 960px) {
+.circle-grid .item {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: 18%;
+    cursor: pointer;
+}
+}
+.circle-grid .item .circular-image {
+    display: block;
+    margin-bottom: 32px;
+}
+.circle-grid .item .heading {
+    text-transform: none;
+}
+.circle-grid .item .heading-small {
+    color: #008ccc;
+    margin-bottom: 8px;
+}
+.circle-grid .item .heading-extra-small {
+    margin-bottom: 16px;
+}
+/*.circle-grid .item .circular-image .trigger {
+    background: #f2f2f2 none repeat scroll 0 0;
+    border-radius: 50%;
+    bottom: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 16px;
+    height: 14%;
+    left: 10px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    transform-origin: left bottom 0;
+    transition: all 250ms ease 0s;
+    width: 14%;
+}*/
+.circle-grid .item .circular-image .trigger .trigger-inner {
+    margin-top: -7px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.circle-grid .item .circular-image .trigger .icon-eye {
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1;
+    text-shadow: none;
+}
+@media only screen and (min-width: 800px) {
+.circle-grid .item .circular-image:hover .trigger {
+    background: #1caaeb none repeat scroll 0 0;
+}
+.circle-grid .item .circular-image:hover .trigger .icon-eye {
+    color: #fff;
+}
+}
+.team img {
+    filter: grayscale(100%);
+}
+
+.circular-image {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 50% 50% 50% 4px;
+    box-sizing: border-box;
+    display: block;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.circular-image img {
+    border-radius: 50%;
+    display: block;
+    height: auto;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+.equipe{
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+.equipe .header{
+  margin-left: 25%;
+}
+
+.item:hover img{
+  filter: grayscale(0);
 }
