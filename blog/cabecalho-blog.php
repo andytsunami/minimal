@@ -1,8 +1,16 @@
+<?php 
+  if($_SESSION["logado"] != TRUE){
+    session_start("visitante");
+
+} else {
+  session_destroy();
+  
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   <html>
     <head>
       <link type="text/css" rel="stylesheet" href="../../css/reset.css"  media="screen,projection"/>
-
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900,900italic,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
@@ -22,10 +30,29 @@
 
         <script type="text/javascript">
           $(document).ready(function(){
-          // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-          $('.modal-trigger').leanModal();
+          
+            $('.modal-trigger').leanModal();
+            $("#cadastro").click(function(){
+              $("#form").attr("action","cadastro.php").submit();
+            });
+
+            $("#logar").click(function(){
+              $("#formLogin").attr("action","login.php").submit();
+            });
+
+            $("#logout").click(function(){
+              window.location = "logout.php";
+            });
+
+            $("#enviarNews").click(function(){
+              $("#newsForm").attr("action","newsletter.php").submit();
+            });
+
+            $("#publicar").click(function(){
+              $("#formGaleria").attr("action","cadastroGaleria.php").submit();
+            });
         });
-          </script>
+        </script>
 
     </head>
 
@@ -37,7 +64,7 @@
   <nav class="no-shadow">
     <div class="nav-wrapper grey darken-4">
     <div class="container">
-      <a href="#" class="brand-logo">Minimal Design</a>
+      <a href="index.php" class="brand-logo">Minimal Design</a>
 
 
       <!-- Mobile Hamburguer Icon -->
@@ -50,18 +77,29 @@
         <li><a href="../../blog.php">Blog</a></li>
         <li><a href="../../galeria.php">Galeria</a></li>
       </ul>
-      <ul class="right hide-on-med-and-down">
+<?php if (isset($_SESSION["logado"]) && $_SESSION["logado"] == TRUE) {   ?>
+          <ul class="right hide-on-med-and-down">
+            <li id="user_login">  
+            <!-- Modal Trigger -->
+            <button class="waves-effect waves-light btn blue" id="logout">Sair</button>
+            </li>
+          </ul>
+<?php } else { ?>
+     <ul class="right hide-on-med-and-down">
         <li id="user_login">  
         <!-- Modal Trigger -->
         <button data-target="modal1" class="waves-effect waves-light btn modal-trigger blue">Login</button>
         </li>
-      </ul>      
+      </ul>  
+      
+<?php }?>
       </div>
 
       <ul class="side-nav">
-        <li><a href="../../index.php">Início</a></li>
-        <li><a href="../../blog.php">Blog</a></li>
-        <li><a href="../../galeria.php">Galeria</a></li>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Sobre</a></li>
       </ul>
 
     </div>
@@ -75,23 +113,24 @@
           <div id="modal1" class="modal">
             <div class="modal-content">
               <h4>Login</h4>
-              <form class="center">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Senha</label>
-        </div>
-      </div>
+              <form class="center" id="formLogin" method="post">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="email" class="validate" name="email">
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="password" type="password" class="validate" name="senha">
+                      <label for="password">Senha</label>
+                    </div>
+                  </div>
               </form>
             </div>
           <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-light btn-flat">Entrar</a>
+            <!-- button class="modal-action modal-close waves-effect waves-light btn-flat" id="logar">Entrar</button -->
+            <button class="modal-action modal-close waves-effect waves-light btn-flat" id="logar">Entrar</button>
             <a href="cadastro.php" class="waves-effect waves-light btn-flat">Cadastrar</a>
           </div>
         </div>
