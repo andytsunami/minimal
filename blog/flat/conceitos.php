@@ -27,13 +27,14 @@
 <!-- Content -->
 <div class="row">
   <div class="col s8" id="blog_content">
-  <h4>Conceitos</h4>
-  <p>Retomando as influências de Bauhaus, o Minimalismo no Design rejeita os estilos altamente decorativos do passado. As decorações se tornaram tão densas e intensas que começaram a atrapalhar a função (utilidade) do objeto.</p>
-  <p>Segundo IVANOFF (2014):</p>
-  <blockquote>[…] Os minimalistas se perguntavam: O quanto você pode retirar de um item – pinturas, esculturas, construções, móveis – sem perder seu propósito e identidade essenciais.(IVANOFF, Ada. What is Minimalism. 2015.</blockquote>
-  <p>Disponível em http://www.sitepoint.com/what-is-minimalism/ Acesso em: 02/11/2015)</p>
-  <p>Porém, o minimalismo não é apenas criar obras simples, e sim obras “puras”. Uma das melhores demonstrações da simplicidade contra o minimalismo esta na imagem abaixo por Maarten P. Kappert.</p>
- 
+  <h4>Conceitos do Flat Design</h4>
+<p>Para aqueles de vocês que nunca ouviram falar do termo, “flat design” é principalmente o termo dado ao estilo de design em que elementos perdem qualquer tipo de caracteres estilísticos que os fazem parecer que eles levantam para fora da página.</p>
+<p>Em termos leigos, isto significa remover elementos estilísticos, como sombras, gradientes de cor, texturas e qualquer outro tipo de elemento que se destina a fazer sentir o elemento tridimensional.</p>
+<p>Designers criam em torno do flat design porque oferece um ar fresco e moderno, e que lhes permite se concentrar no que é o mais importante: o conteúdo da mensagem.</p>
+<p>Ao remover estilos de design que podem facilmente datar sua concepção (ou que rapidamente poderiam causar o design se tornar desatualizado), as criações se tornam relevantes para longos períodos de tempo “à prova de futuro” ou atemporal. O flat design também parece tornar as coisas mais eficientes e corta o estilo “fluff”.</p>
+<p>Não é muito justo discutir sobre o flat design e não falar sobre o oposto dele. O termo frequentemente dado para o oposto de flat design é o “rico design” ou design 2.0, o que é melhor descrito como a adição de ornamentos de design, como chanfros, sombras, reflexos e gradientes de cores. Essas coisas são muitas vezes utilizadas para fazer os elementos se tornarem mais táteis e utilizáveis para usuários que estão navegando o site ou usando um aplicativo.</p>
+<p>É importante notar que o design 2.0 não é Esqueumoformismo. Esqueumoformismo é o ato de fazer as coisas se assemelharem a suas contrapartes físicas para fazer deliberadamente lhes parecer familiar.</p><br>
+<p><b>Fonte: </b><a href="http://moodesigner.com.br/origens-do-flat-design-como-a-eficiencia-e-minimalismo-virou-o-mundo-digital-plano/">Moo Design</a></p>
 </p>
   </div>
 

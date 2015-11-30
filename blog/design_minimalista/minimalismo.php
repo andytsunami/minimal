@@ -27,13 +27,13 @@
 <!-- Content -->
 <div class="row">
   <div class="col s8" id="blog_content">
-  <h4>Minimalismo em User Interfaces</h4>
-  <p>Retomando as influências de Bauhaus, o Minimalismo no Design rejeita os estilos altamente decorativos do passado. As decorações se tornaram tão densas e intensas que começaram a atrapalhar a função (utilidade) do objeto.</p>
-  <p>Segundo IVANOFF (2014):</p>
-  <blockquote>[…] Os minimalistas se perguntavam: O quanto você pode retirar de um item – pinturas, esculturas, construções, móveis – sem perder seu propósito e identidade essenciais.(IVANOFF, Ada. What is Minimalism. 2015.</blockquote>
-  <p>Disponível em http://www.sitepoint.com/what-is-minimalism/ Acesso em: 02/11/2015)</p>
-  <p>Porém, o minimalismo não é apenas criar obras simples, e sim obras “puras”. Uma das melhores demonstrações da simplicidade contra o minimalismo esta na imagem abaixo por Maarten P. Kappert.</p>
- 
+  Design
+
+<h4>Design Minimalista em User Interfaces</h4>
+<p>A interface do usuário (UI, do inglês User Interface) é toda projetado em um dispositivo tecnológico no qual um humano pode interagir como a tela do visor, teclado, mouse, área de trabalho, páginas da web, entre outros. </p>
+<p>Quando aplicado corretamente, o minimalismo no meio digital deve apresentar conteúdos e funções de uma forma simples e direta, oferendo o mínimo de distrações do conteúdo primário possível e removendo conteúdo ou funções que não fazem parte do objetivo primário da interface ou dos usuários. </p>
+<p>Um dos pioneiros no uso do minimalismo no meio digital é a Google que desde sua primeira página de busca, priorizou a simplicidade e austeridade em sua interface. </p>
+<p>Em 2011, a Microsoft lançou no mercado o Windows 8, com um dos maiores redesigns de seu sistema operacional com o conceito do ”Design Moderno”, possuindo influências do design minimalista. Na própria documentação oficial da Microsoft, há a menção da filosofia da Bauhaus como um dos pilares fundamentais de seu design. </p>
 </p>
   </div>
 

@@ -27,13 +27,11 @@
 <!-- Content -->
 <div class="row">
   <div class="col s8" id="blog_content">
-  <h4>Conceitos</h4>
-  <p>Retomando as influências de Bauhaus, o Minimalismo no Design rejeita os estilos altamente decorativos do passado. As decorações se tornaram tão densas e intensas que começaram a atrapalhar a função (utilidade) do objeto.</p>
-  <p>Segundo IVANOFF (2014):</p>
-  <blockquote>[…] Os minimalistas se perguntavam: O quanto você pode retirar de um item – pinturas, esculturas, construções, móveis – sem perder seu propósito e identidade essenciais.(IVANOFF, Ada. What is Minimalism. 2015.</blockquote>
-  <p>Disponível em http://www.sitepoint.com/what-is-minimalism/ Acesso em: 02/11/2015)</p>
-  <p>Porém, o minimalismo não é apenas criar obras simples, e sim obras “puras”. Uma das melhores demonstrações da simplicidade contra o minimalismo esta na imagem abaixo por Maarten P. Kappert.</p>
- 
+  Design
+
+<h4>Conceitos do Design Minimalista</h4>
+<p>O minimalismo é definido como o <i>conceito de minimizar distrações do que é realmente valioso ou essencial</i>. Como resultado, o minimalismo possibilita  uma visão direta da verdadeira natureza do que foi criado, ou da mensagem a ser transmitida.</p> 
+<p>O minimalismo se encontra em várias áreas criativas, como: arte, arquitetura, design, dança, produção de vídeos, peças de teatro, música, moda, fotografia e literatura. Este princípio pode até mesmo ser aplicado como um estilo de vida, e foi adaptado em esportes, gastronomia,  entre outras áreas. </p>
 </p>
   </div>
 

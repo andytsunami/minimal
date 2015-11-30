@@ -27,13 +27,23 @@
 <!-- Content -->
 <div class="row">
   <div class="col s8" id="blog_content">
-  <h4>Origem</h4>
-  <p>Retomando as influências de Bauhaus, o Minimalismo no Design rejeita os estilos altamente decorativos do passado. As decorações se tornaram tão densas e intensas que começaram a atrapalhar a função (utilidade) do objeto.</p>
-  <p>Segundo IVANOFF (2014):</p>
-  <blockquote>[…] Os minimalistas se perguntavam: O quanto você pode retirar de um item – pinturas, esculturas, construções, móveis – sem perder seu propósito e identidade essenciais.(IVANOFF, Ada. What is Minimalism. 2015.</blockquote>
-  <p>Disponível em http://www.sitepoint.com/what-is-minimalism/ Acesso em: 02/11/2015)</p>
-  <p>Porém, o minimalismo não é apenas criar obras simples, e sim obras “puras”. Uma das melhores demonstrações da simplicidade contra o minimalismo esta na imagem abaixo por Maarten P. Kappert.</p>
- 
+ Design
+
+<h4>Origem do Flat Design</h4>
+<p>Quase tudo que vemos na Web ou no mundo digital de hoje tem origens e suas ascendências na impressão e arte. Embora seja difícil determinar o início exato do design plano de hoje ou onde suas origens começaram, há alguns períodos de design e arte em que o flat design foi inspirado.</p>
+<h5>Estilo suíço de Design</h5>
+<p>O estilo suíço (às vezes chamado de estilo tipográfico Internacional) de design é o principal período de design que vêm à mente e merece a atenção para qualquer discussão sobre a história do design plano. O estilo de design suíço foi o estilo de design dominante ao longo dos anos de 1940 e 1950, dos quais se originou na Suíça.</p>
+<p>Os projetos suícos focaram principalmente sobre o uso de grades, tipografia sans-serif e hierarquia limpa do conteúdo e layout. Durante os anos 40 e 50, o design suíço incluiu muitas vezes uma combinação de uma grande fotografia com uma tipografia simples e minimalista.</p>
+<p>Como a tipografia foi um elemento importante no design, a popular fonte Helvetica que também foi criada na Suíça em 1957 e foi muito usada em quase tudo durante a época.</p>
+<p>Assim como o flat design foi naquela época e antes que a Microsoft e a Apple se tornarem populares, o estilo suíço de design pode ser rastreado antes da década de 1920, na Alemanha, mas foi o suíço que fez explodir sua popularidade (para os fãs de História da Arte, a escola Bauhaus na Alemanha focou-se em arquitetura e tipografia, e a tipografia tem semelhanças com o design helvético).</p>
+<h5>Design Minimalista</h5>
+<p>Outra grande influência de hoje no flat web design pode ser encontrada na história do Minimalismo. O termo “minimalismo” às vezes é usado como sinônimo de design plano de hoje, mas o minimalismo era muito popular antes da web que era apenas um pensamento. O Minimalismo tem a sua história em arquitetura, arte visual e design.</p>
+<p><b>Minimalismo</b>  tem uma extensa história e abrange vários meios, mas onde o flat design leva sua influência é principalmente no design e as expressões de artes visuais do minimalismo. Minimalismo é bem conhecido para o ato de retirar tudo de uma peça, deixando apenas os elementos necessários. Formas geométricas, alguns elementos, cores brilhantes e linhas limpas dominam a maior parte do projeto do estilo minimalismo.</p>
+<p>É seguro dizer que uma mistura de design suíço e o minimalismo foi fortemente influenciado no que vemos hoje no mundo digital ser chamado de “flat design”.</p>
+<h5>Surgimento de design plano no mundo digital</h5>
+<p>A história se repete, e o mesmo acontece com a tendência atual do flat design. Como vimos acima, design plano pode ser rastreado por todo o caminho até a década de 1920 e têm influenciado o nosso período atual como uma adaptação de design plano.</p>
+<p>Enquanto muitos designers trabalharam seu caminho para o design plano ao criar sites e outras peças de design, é seguro dizer que os gostos de Microsoft e Apple fez o flat design se tornar bastante popular ao longo dos últimos anos.</p><br>
+<p><b>Fonte: </b><a href="http://moodesigner.com.br/origens-do-flat-design-como-a-eficiencia-e-minimalismo-virou-o-mundo-digital-plano/">Moo Designer</a></p>
 </p>
   </div>
 

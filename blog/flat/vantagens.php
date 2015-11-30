@@ -27,14 +27,12 @@
 <!-- Content -->
 <div class="row">
   <div class="col s8" id="blog_content">
-  <h4>Vantagens</h4>
-  <p>Retomando as influências de Bauhaus, o Minimalismo no Design rejeita os estilos altamente decorativos do passado. As decorações se tornaram tão densas e intensas que começaram a atrapalhar a função (utilidade) do objeto.</p>
-  <p>Segundo IVANOFF (2014):</p>
-  <blockquote>[…] Os minimalistas se perguntavam: O quanto você pode retirar de um item – pinturas, esculturas, construções, móveis – sem perder seu propósito e identidade essenciais.(IVANOFF, Ada. What is Minimalism. 2015.</blockquote>
-  <p>Disponível em http://www.sitepoint.com/what-is-minimalism/ Acesso em: 02/11/2015)</p>
-  <p>Porém, o minimalismo não é apenas criar obras simples, e sim obras “puras”. Uma das melhores demonstrações da simplicidade contra o minimalismo esta na imagem abaixo por Maarten P. Kappert.</p>
- 
-</p>
+  <h4>Vantagens e Desvantagens do Flat Design</h4>
+<p>Abaixo, preparamos um infográfico com as principais vantagens e desvantagens do Flat Design</p>
+<br>
+
+<img src="info.jpg" width="600px">
+</p><br /><br /><br />
   </div>
 
 <!-- Sidemenu -->

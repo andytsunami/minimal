@@ -27,13 +27,12 @@
 <!-- Content -->
 <div class="row">
   <div class="col s8" id="blog_content">
-  <h4>Outras aplicações</h4>
-  <p>Retomando as influências de Bauhaus, o Minimalismo no Design rejeita os estilos altamente decorativos do passado. As decorações se tornaram tão densas e intensas que começaram a atrapalhar a função (utilidade) do objeto.</p>
-  <p>Segundo IVANOFF (2014):</p>
-  <blockquote>[…] Os minimalistas se perguntavam: O quanto você pode retirar de um item – pinturas, esculturas, construções, móveis – sem perder seu propósito e identidade essenciais.(IVANOFF, Ada. What is Minimalism. 2015.</blockquote>
-  <p>Disponível em http://www.sitepoint.com/what-is-minimalism/ Acesso em: 02/11/2015)</p>
-  <p>Porém, o minimalismo não é apenas criar obras simples, e sim obras “puras”. Uma das melhores demonstrações da simplicidade contra o minimalismo esta na imagem abaixo por Maarten P. Kappert.</p>
- 
+ Design
+
+<h4>Outras aplicações do Design Minimalista</h4>
+<p>Na arquitetura, o arquiteto alemão Ludwig Mies van der Rohe (1886-1969) foi uma das figuras principais do minimalismo e o autor do lema “Less is more” (Menos é mais). Van der Rohe é um dos pais da arquitetura moderna com suas formas limpas, e a visão das cidades de Nova Iorque até Beijing foram altamente influenciadas por ele. </p>
+<p>Van der Rohe procurava uma simplicidade e clareza, e suas aplicações famosas eram o uso de materiais modernos para a época como aço e placas de vidro; a redução da estrutura para o mínimo; e a inclusão de muitos espaços vazios. </p>
+<p>A arquitetura minimalista teve como inspiração a arquitetura tradicional japonesa que possui formas simples e limpas. Esta reflexão da cultura japonesa é prezada, onde tudo que não é essencial a funcionalidade de algo não é incluído em seu design.</p> 
 </p>
   </div>
 

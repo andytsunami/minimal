@@ -34,11 +34,11 @@
           
             $('.modal-trigger').leanModal();
             $("#cadastro").click(function(){
-              $("#form").attr("action","cadastro.php").submit();
+              $("#form").attr("action","../cadastro.php").submit();
             });
 
             $("#logar").click(function(){
-              $("#formLogin").attr("action","login.php").submit();
+              $("#formLogin").attr("action","../login.php").submit();
             });
 
             $("#logout").click(function(){
@@ -46,11 +46,11 @@
             });
 
             $("#enviarNews").click(function(){
-              $("#newsForm").attr("action","newsletter.php").submit();
+              $("#newsForm").attr("action","../newsletter.php").submit();
             });
 
             $("#publicar").click(function(){
-              $("#formGaleria").attr("action","cadastroGaleria.php").submit();
+              $("#formGaleria").attr("action","../cadastroGaleria.php").submit();
             });
         });
         </script>

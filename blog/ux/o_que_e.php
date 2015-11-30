@@ -27,13 +27,13 @@
 <!-- Content -->
 <div class="row">
   <div class="col s8" id="blog_content">
-  <h4>Aplicações</h4>
-  <p>Retomando as influências de Bauhaus, o Minimalismo no Design rejeita os estilos altamente decorativos do passado. As decorações se tornaram tão densas e intensas que começaram a atrapalhar a função (utilidade) do objeto.</p>
-  <p>Segundo IVANOFF (2014):</p>
-  <blockquote>[…] Os minimalistas se perguntavam: O quanto você pode retirar de um item – pinturas, esculturas, construções, móveis – sem perder seu propósito e identidade essenciais.(IVANOFF, Ada. What is Minimalism. 2015.</blockquote>
-  <p>Disponível em http://www.sitepoint.com/what-is-minimalism/ Acesso em: 02/11/2015)</p>
-  <p>Porém, o minimalismo não é apenas criar obras simples, e sim obras “puras”. Uma das melhores demonstrações da simplicidade contra o minimalismo esta na imagem abaixo por Maarten P. Kappert.</p>
- 
+  Design
+
+<h4>O que é User Experience</h4>
+<p>A experiência do usuário (UX, do inglês User Experience) cobre todos os aspectos da interação do usuário final com a empresa, seus serviços e seus produtos. </p>
+<p>A interface do usuário é um dos pilares principais para uma boa experiência para o usuário, contudo a arquitetura de informação também é muito importante para a estruturação e entendimento do usuário. </p>
+<p>A usabilidade de uma interface é o fator que cobre o quanto o sistema é fácil de aprender, eficiente e agradável para usar, agradável</p>
+<p>Para um bom UX, é necessário compreender  o conceito do design minimalista, onde o foco principal está centrado em transmitir a  mensagem ao usuário final, com o mínimo de distrações possível. </p>
 </p>
   </div>
 
