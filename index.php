@@ -136,7 +136,7 @@
 
     <div class="row">
     <div class="col s2 offset-s10">
-    <a class="waves-effect waves-light btn blue">Ver mais</a>
+    <a class="waves-effect waves-light btn blue" href="galeria.php?tag=4">Ver mais</a>
     </div>
     </div>
 
@@ -167,7 +167,7 @@
 
     <div class="row">
     <div class="col s2 offset-s10">
-    <a class="waves-effect waves-light btn blue">Ver mais</a>
+    <a class="waves-effect waves-light btn blue" href="galeria.php?tag=5">Ver mais</a>
     </div>
     </div>
 
@@ -198,7 +198,7 @@
 
     <div class="row">
     <div class="col s2 offset-s10">
-    <a class="waves-effect waves-light btn blue">Ver mais</a>
+    <a class="waves-effect waves-light btn blue" href="galeria.php?tag=1">Ver mais</a>
     </div>
     </div>
       </div>

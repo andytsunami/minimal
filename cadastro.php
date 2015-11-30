@@ -1,7 +1,9 @@
 <?php 
+	ob_start();
+	include("cabecalho.php");
 	ini_set('display_errors', 'on');
 	require_once 'config.php';
-	header('Content-Type: text/html; charset=utf-8');
+	
 	
 	$conexao = @mysql_connect($host, $usuario, $senha) or exit(mysql_error());
 	mysql_set_charset("utf8", $conexao);
@@ -52,7 +54,7 @@
 		return $quant == 0;
 	}
 	
-	include("cabecalho.php");
+	
 	mysql_close();
 ?>
 
